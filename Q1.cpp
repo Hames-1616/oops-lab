@@ -7,22 +7,22 @@ int main()
     float total=0;
     small=INT_MAX;
     largest=INT_MIN;
-    int n,numb;
+    int n,numb[n];
     float aver;
     cout<<"How many numbers are you going to enter\n";
     cin>>n;
     for(int i=0;i<n;i++)
     {
         cout<<"Enter Number "<<i+1<<":";
-        cin>>numb;
-        total=total+numb;
-        if(numb>largest)
+        cin>>numb[i];
+        total=total+numb[i];
+        if(numb[i]>largest)
         {
-            largest=numb;
+            largest=numb[i];
         }
-        if(numb<small)
+        if(numb[i]<small)
         {
-            small=numb;    
+            small=numb[i];    
         }
     }
     aver=total/n;
